@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Jose Manuel Mendoza Torrico">
+    <meta name="author" content="Jose Manuel Mendoza Torrico">
+    <title>WDD 131 - Dynamic Web Fundamentals - Jose Mendoza</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>HEllooo</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Jose Mendoza</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/jose-manuel-mendoza-torrico-06b47332a/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/" target="_blank">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=spa&id=p20#p20" target="_blank">Scripture</a></li>
+                <li><a href="#" target="_blank">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="profile-container">
+                <p>My name is Jose Mendoza from Bolivia. I enjoy spending time with family and friends, traveling, and exploring new places. Growing up, I was curious and passionate about learning, especially in science and mathematics. In high school, I balanced academics and extracurriculars. Now, as a college student, I face new opportunities and challenges, from late-night study sessions to self-doubt. Outside the classroom, I volunteer, participate in campus events, and spend time with friends. Looking ahead, I'm excited for the future and committed to working hard to achieve my dreams.</p>
+                <img src="images/image1.jpg" alt="My Image Profile">
+            </div>
+
+            <h3>Sucre, Bolivia</h3>
+            <div class="Bolivia-flag-container">
+                <p>Bolivia, in the heart of South America, boasts diverse landscapes, from Andean peaks to the Amazon rainforest. Its rich indigenous heritage is reflected in lively festivals, music, and colorful textiles. Bustling markets showcase local produce and crafts, inviting exploration of its unique culture and stunning natural beauty.</p>
+                <img src="images/image2.jpg" alt="Flag of Bolivia">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul class="web-resources">
+                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jose Manuel Mendoza Torrico, Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
