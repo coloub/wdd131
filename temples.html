@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menuToggle.js" defer></script>
+    <title>Temple Album</title>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <div id="menuIcon" onclick="toggleMenu()" aria-expanded="false">&#9776;</div>
+            <ul id="menuItems">
+                <li><a href="#home" aria-label="Go to home section">Home</a></li>
+                <li><a href="#old" aria-label="Go to old section">Old</a></li>
+                <li><a href="#new" aria-label="Go to new section">New</a></li>
+                <li><a href="#large" aria-label="Go to large section">Large</a></li>
+                <li><a href="#small" aria-label="Go to small section">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Home</h2>
+        <div class="temple-grid">
+            <figure>
+                <img src="images/temple_image.jpg" alt="San Diego Temple" loading="lazy">
+                <figcaption>San Diego California</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="Salt Lake Temple" loading="lazy">
+                <figcaption>Salt Lake Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="Provo Temple" loading="lazy">
+                <figcaption>Provo Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple_image.jpg" alt="New Temple" loading="lazy">
+                <figcaption>New Temple Location</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jose Manuel Mendoza Torrico, Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
