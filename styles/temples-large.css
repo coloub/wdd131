@@ -1,4 +1,9 @@
 @media (max-width: 768px) {
+    
+    .temple-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -30,7 +35,11 @@
         text-decoration: none;
     }
 }
-
+@media (max-width: 1024px) and (min-width: 769px) {
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
 @media (min-width: 769px) {
     nav ul {
         display: flex;

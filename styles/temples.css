@@ -64,7 +64,7 @@ h2 {
 
 .temple-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -77,6 +77,17 @@ h2 {
 
 .temple-grid img:hover {
     transform: scale(1.05);
+}
+
+.temple-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.temple-grid figcaption {
+    margin-top: 10px;
+    font-size: 1rem;  
+    color: var(--secondary-text-color);     
 }
 
 footer {
