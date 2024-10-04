@@ -52,6 +52,24 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#weather-icon {
+    width: 50px; /* Ajusta el tamaño */
+    height: auto; /* Mantiene la proporción */
+}
+
+.weather-title {
+    position: relative; /* Asegura que el ::after se posicione correctamente */
+    display: inline-flex; /* Alinea horizontalmente el texto y el ícono */
+    align-items: center; /* Centra verticalmente */
+}
+
+.weather-title::after {
+    content: ''; /* Crea un pseudo-elemento vacío */
+    display: inline-block; /* Permite aplicar un margen */
+    width: 8px; /* Espacio entre el título y el ícono */
+}
+
+
 #hero {
     grid-area: hero;
     display: flex;
