@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Chile</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chile - A Place of Natural Wonders</h1>
+    </header>
+
+    <main>
+        <section id="hero">
+            <img id="hero-image" srcset="path_to_webp_image_small.webp 500w, path_to_webp_image_large.webp 1000w" sizes="(max-width: 600px) 500px, 1000px" alt="Beautiful view of Chile">
+        </section>
+
+        <section id="data">
+            <h2>Data</h2>
+            <ul>
+                <li>Capital: Santiago</li>
+                <li>Population: 19 million</li>
+                <li>Language: Spanish</li>
+                <li>Currency: Chilean Peso</li>
+                <li>Climate: Varied</li>
+            </ul>
+        </section>
+
+        <section id="weather">
+            <h2>Weather <span id="weather-icon">⛅</span></h2>
+            <ul>
+                <li>Temperature: 8°C</li>
+                <li>Wind Speed: 10 km/h</li>
+                <li>Wind Chill: <span id="wind-chill"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
