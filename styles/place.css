@@ -1,5 +1,5 @@
 :root {
-    --primary-bg-color: #0d47a1; /* Azul bandera de Chile */
+    --primary-bg-color: #1565c0; /* Azul bandera de Chile (ajustado) */
     --primary-text-color: white;
     --secondary-text-color: #333;
     --accent-color: #ff4b4b; /* Rojo bandera de Chile */
@@ -9,7 +9,7 @@
     --border-radius: 10px;
 }
 
-html, body {
+body {
     font-family: var(--font-family);
     margin: 0;
     background-color: var(--primary-bg-color);
@@ -47,7 +47,7 @@ main {
 #data, #weather {
     background-color: white;
     color: var(--secondary-text-color);
-    padding: 20px;
+    padding: 30px; /* Aumentado padding */
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -63,14 +63,15 @@ main {
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Mantener proporción de imagen */
 }
 
 footer {
-    background-color: var(--primary-bg-color);
+    background: linear-gradient(135deg, var(--primary-bg-color), #0d47a1); /* Gradiente */
     color: var(--primary-text-color);
     text-align: center;
     padding: var(--header-padding);
-    border-top: 5px solid var(--accent-color);
+    border-top: 10px solid var(--accent-color); /* Borde más grueso */
     margin-top: auto; /* Se asegura de que el footer esté al final */
 }
 
@@ -80,12 +81,12 @@ footer p {
 
 /* Efectos de transición para elementos */
 button, a, img, #data, #weather {
-    transition: all 0.3s ease;
+    transition: all 0.5s ease; /* Transición más lenta */
 }
 
 button:hover, a:hover, img:hover, #data:hover, #weather:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* Sombra menos intensa */
 }
 
 /* Media Queries para ajustar en pantallas más pequeñas */
