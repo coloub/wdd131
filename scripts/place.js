@@ -1,7 +1,3 @@
-// Display current year and last modified date
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
-
 // Function to calculate wind chill
 function calculateWindChill(temp, windSpeed) {
     if (temp <= 10 && windSpeed > 4.8) {
@@ -18,3 +14,11 @@ const windSpeed = 10; // in km/h
 
 // Update wind chill in the DOM
 document.getElementById('wind-chill').textContent = calculateWindChill(temperature, windSpeed);
+
+// Obtiene el año actual y lo coloca en el footer
+const yearElement = document.getElementById('currentyear');
+yearElement.textContent = new Date().getFullYear();
+
+// Obtiene la fecha de última modificación y la coloca en el footer
+const lastModifiedElement = document.getElementById('lastModified');
+lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;

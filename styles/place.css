@@ -1,27 +1,39 @@
 :root {
-    --primary-bg-color: #2c3e50;
+    --primary-bg-color: #0d47a1; /* Azul bandera de Chile */
     --primary-text-color: white;
     --secondary-text-color: #333;
-    --accent-color: #f0f0f0;
+    --accent-color: #ff4b4b; /* Rojo bandera de Chile */
     --font-family: 'Roboto', sans-serif;
+    --header-font-family: 'Montserrat', sans-serif; /* Fuente para encabezados */
     --header-padding: 20px;
+    --border-radius: 10px;
 }
 
-body {
+html, body {
     font-family: var(--font-family);
     margin: 0;
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
+    min-height: 100%; /* Para que el body siempre ocupe el 100% del viewport */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     text-align: center;
     padding: var(--header-padding);
-    background-color: var(--primary-bg-color);
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: white;
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 main {
+    flex: 1; /* Toma todo el espacio disponible */
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
@@ -32,20 +44,12 @@ main {
     align-items: start;
 }
 
-#data {
-    grid-area: data;
-    background-color: var(--accent-color);
+#data, #weather {
+    background-color: white;
     color: var(--secondary-text-color);
     padding: 20px;
-    border-radius: 8px;
-}
-
-#weather {
-    grid-area: weather;
-    background-color: var(--accent-color);
-    color: var(--secondary-text-color);
-    padding: 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #hero {
@@ -57,33 +61,58 @@ main {
 #hero img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 footer {
-    text-align: center;
     background-color: var(--primary-bg-color);
-    color: var(--accent-color);
-    padding: 10px;
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: var(--header-padding);
+    border-top: 5px solid var(--accent-color);
+    margin-top: auto; /* Se asegura de que el footer esté al final */
 }
 
+footer p {
+    margin: 5px 0;
+}
+
+/* Efectos de transición para elementos */
+button, a, img, #data, #weather {
+    transition: all 0.3s ease;
+}
+
+button:hover, a:hover, img:hover, #data:hover, #weather:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries para ajustar en pantallas más pequeñas */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "hero"
             "data"
             "weather";
-        text-align: center;
     }
 
-    #data, #weather {
+    #hero {
         margin-bottom: 20px;
     }
 }
 
-::after {
-    content: "";
-    display: block;
-    clear: both;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Reducir tamaño del título en móviles */
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
 }
