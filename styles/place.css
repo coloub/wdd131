@@ -1,0 +1,89 @@
+:root {
+    --primary-bg-color: #2c3e50;
+    --primary-text-color: white;
+    --secondary-text-color: #333;
+    --accent-color: #f0f0f0;
+    --font-family: 'Roboto', sans-serif;
+    --header-padding: 20px;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+header {
+    text-align: center;
+    padding: var(--header-padding);
+    background-color: var(--primary-bg-color);
+    color: var(--accent-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+        "data hero weather"
+        "data hero weather";
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+#data {
+    grid-area: data;
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#weather {
+    grid-area: weather;
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#hero {
+    grid-area: hero;
+    display: flex;
+    justify-content: center;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--primary-bg-color);
+    color: var(--accent-color);
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "hero"
+            "data"
+            "weather";
+        text-align: center;
+    }
+
+    #data, #weather {
+        margin-bottom: 20px;
+    }
+}
+
+::after {
+    content: "";
+    display: block;
+    clear: both;
+}
