@@ -1,0 +1,161 @@
+:root {
+    --primary-bg-color: #2c3e50;
+    --primary-text-color: white;
+    --secondary-text-color: #333;
+    --accent-color: #f0f0f0;
+    --font-family: 'Roboto', sans-serif;
+    --header-padding: 20px;
+    --hover-color: #ecf0f1;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+}
+
+header {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    padding: var(--header-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#menuIcon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.temple-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.temple-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.temple-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.temple-grid figcaption {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);     
+}
+
+footer {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: var(--header-padding);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    
+    .temple-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-bg-color);
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    #menuIcon {
+        display: block;
+        color: var(--menu-icon-color);
+        font-size: var(--menu-font-size);
+        cursor: pointer;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        color: var(--primary-text-color);
+        text-decoration: none;
+    }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media (min-width: 769px) {
+    nav ul {
+        display: flex;
+    }
+
+    #menuIcon {
+        display: none;
+    }
+}
