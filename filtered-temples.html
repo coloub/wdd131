@@ -6,29 +6,30 @@
     <meta name="description" content="Explore the Temple Album, a curated collection of stunning temple images showcasing architectural beauty from around the world. Discover rich histories and cultural significance as you browse through our dynamic gallery of temples.">
     <meta name="author" content="Jose Manuel Mendoza Torrico">
     <link rel="stylesheet" href="styles/filtered-temples.css">
-   
     <script src="scripts/filtered-temples.js" defer></script>
     <script src="scripts/menuToggle.js" defer></script>
     <title>Temple Album</title>
 </head>
 <body>
+    <div class="wrapper">
     <header>
         <h1>Temple Album</h1>
         <nav>
             <div id="menuIcon" role="button" onclick="toggleMenu()" aria-expanded="false" tabindex="0">&#9776;</div>
             <ul id="menuItems">
-                <li><a href="home" aria-label="Go to home section">Home</a></li>
-                <li><a href="old" aria-label="Go to old section">Old</a></li>
-                <li><a href="new" aria-label="Go to new section">New</a></li>
-                <li><a href="large" aria-label="Go to large section">Large</a></li>
-                <li><a href="small" aria-label="Go to small section">Small</a></li>
+                <li><a href="#" id="home-filter" aria-label="Go to home section">Home</a></li>
+                <li><a href="#" id="old-filter" aria-label="Go to old section">Old</a></li>
+                <li><a href="#" id="new-filter" aria-label="Go to new section">New</a></li>
+                <li><a href="#" id="large-filter" aria-label="Go to large section">Large</a></li>
+                <li><a href="#" id="small-filter" aria-label="Go to small section">Small</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h2>Home</h2>
-        <div id="temple-container" class="temple-grid"></div> <!-- Contenedor dinámico para los templos -->
+        <div id="temple-container" class="temple-grid"></div> 
     </main>
+    </div>
     <footer>
         <p>&copy; <span id="currentyear"></span> Jose Manuel Mendoza Torrico, Bolivia</p>
         <p id="lastModified"></p>

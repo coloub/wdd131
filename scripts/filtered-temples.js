@@ -1,8 +1,6 @@
-// Obtiene el año actual y lo coloca en el footer
 const yearElement = document.getElementById('currentyear');
 yearElement.textContent = new Date().getFullYear();
 
-// Obtiene la fecha de última modificación y la coloca en el footer
 const lastModifiedElement = document.getElementById('lastModified');
 lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 
@@ -65,12 +63,11 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add more temple objects here...
   ];
 
   function displayTemples(templeArray) {
     const container = document.getElementById('temple-container');
-    container.innerHTML = ''; // Limpiar cualquier contenido existente
+    container.innerHTML = ''; 
   
     templeArray.forEach(temple => {
       const card = document.createElement('div');
@@ -86,7 +83,6 @@ const temples = [
     });
   }
   
-  // Llamada inicial para mostrar todos los templos
   displayTemples(temples);
 
   function filterTemples(criteria) {
@@ -106,16 +102,18 @@ const temples = [
         filteredTemples = temples.filter(temple => temple.area < 10000);
         break;
       default:
-        filteredTemples = temples; // Mostrar todos los templos
+        filteredTemples = temples;
         break;
     }
   
     displayTemples(filteredTemples);
   }
   
+  
+  document.getElementById('home-filter').addEventListener('click', () => filterTemples('all'));
   document.getElementById('old-filter').addEventListener('click', () => filterTemples('old'));
   document.getElementById('new-filter').addEventListener('click', () => filterTemples('new'));
   document.getElementById('large-filter').addEventListener('click', () => filterTemples('large'));
   document.getElementById('small-filter').addEventListener('click', () => filterTemples('small'));
-  document.getElementById('home-filter').addEventListener('click', () => filterTemples('all'));
+
   

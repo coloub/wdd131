@@ -8,12 +8,26 @@
     --hover-color: #ecf0f1;
 }
 
-body {
-    font-family: var(--font-family);
+html, body {
+    height: 100%; 
     margin: 0;
     padding: 0;
     background-color: var(--accent-color);
     color: var(--secondary-text-color);
+    font-family: var(--font-family);
+}
+
+.wrapper {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 header {
@@ -54,12 +68,6 @@ nav ul li a:hover {
     color: var(--hover-color);
 }
 
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
 h2 {
     text-align: center;
     font-size: 2rem;
@@ -68,7 +76,7 @@ h2 {
 
 .temple-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -102,6 +110,9 @@ footer {
     color: var(--primary-text-color);
     text-align: center;
     padding: var(--header-padding);
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -109,7 +120,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    
     .temple-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -145,11 +155,13 @@ footer p {
         text-decoration: none;
     }
 }
+
 @media (max-width: 1024px) and (min-width: 769px) {
     .temple-grid {
         grid-template-columns: repeat(2, 1fr); 
     }
 }
+
 @media (min-width: 769px) {
     nav ul {
         display: flex;
