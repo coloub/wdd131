@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+</head>
+<body>
+    <h1>Thank you for your review!</h1>
+    <p id="review-count"></p>
+
+    <script>
+        // Obtener el contador de reseñas de localStorage
+        let reviewCount = localStorage.getItem('reviewCount');
+
+        // Si no existe, inicializamos en 0
+        if (!reviewCount) {
+            reviewCount = 0;
+        }
+
+        // Incrementar el contador de reseñas
+        reviewCount++;
+        localStorage.setItem('reviewCount', reviewCount);
+
+        // Mostrar el contador actualizado
+        document.getElementById('review-count').textContent = `You have completed ${reviewCount} reviews.`;
+    </script>
+</body>
+</html>

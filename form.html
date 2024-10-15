@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Product Review</h1>
+        <form id="product-review-form" action="review.html" method="GET">
+            <!-- Product Name -->
+            <label for="product-name">Product Name</label>
+            <select id="product-name" name="product-name" required>
+                <option disabled selected value="">Choose a Product ...</option>
+            </select>
+            
+            <!-- Overall Rating -->
+            <label for="rating">Overall Rating</label>
+            <div class="rating-container">
+                <input type="radio" id="star1" name="rating" value="1" required>
+                <label for="star1">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">&#9733;&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">&#9733;&#9733;&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">&#9733;&#9733;&#9733;&#9733;</label>
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+            </div>
+            
+            <!-- Date of Installation -->
+            <label for="install-date">Date of Installation</label>
+            <input type="date" id="install-date" name="install-date" required>
+            
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Which features did you find useful in the product? (Check all that apply)</legend>
+                <label for="durability">
+                    <input type="checkbox" id="durability" name="features" value="Durability"> Durability
+                </label>
+                <label for="ease-of-use">
+                    <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use"> Ease of Use
+                </label>
+                <label for="performance">
+                    <input type="checkbox" id="performance" name="features" value="Performance"> Performance
+                </label>
+                <label for="design">
+                    <input type="checkbox" id="design" name="features" value="Design"> Design
+                </label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="review">Written Review (Optional)</label>
+            <textarea id="review" name="review" rows="5"></textarea>
+
+            <!-- Your Name -->
+            <label for="user-name">Your Name (Optional)</label>
+            <input type="text" id="user-name" name="user-name">
+
+            <!-- Submit Button -->
+            <input type="submit" value="Post Review">
+        </form>
+    </div>
+
+    <!-- Common Footer -->
+    <footer>
+        <p>&copy;2024 Tools Store | Last Modification: 02/26/2024</p>
+    </footer>
+
+    <script src="form.js"></script>
+</body>
+</html>
