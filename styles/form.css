@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -27,6 +27,7 @@ label {
     font-weight: bold;
 }
 
+/* Styles for form controls */
 input, select, textarea {
     width: 100%;
     padding: 10px;
@@ -38,6 +39,13 @@ input, select, textarea {
 
 input[type="checkbox"] {
     width: auto;
+}
+
+/* Focus state for inputs */
+input:focus, select:focus, textarea:focus {
+    border-color: #5a2d82;
+    outline: none;
+    box-shadow: 0 0 5px rgba(90, 45, 130, 0.5);
 }
 
 .rating-container {
@@ -63,6 +71,7 @@ input[type="checkbox"] {
 fieldset {
     border: none;
     padding: 0;
+    margin: 10px 0;
 }
 
 input[type="submit"] {
