@@ -57,7 +57,7 @@ input:focus, select:focus, textarea:focus {
     display: none;
 }
 
-/* Estilo para las estrellas no seleccionadas */
+/* Style for unselected stars */
 .rating-container label {
     font-size: 2rem;
     cursor: pointer;
@@ -65,15 +65,15 @@ input:focus, select:focus, textarea:focus {
     transition: color 0.3s;
 }
 
-/* Estrellas iluminadas al pasar el ratón por encima */
+/* Stars highlighted when hovering */
 .rating-container label:hover,
 .rating-container label:hover ~ label {
     color: #ffcc00;
 }
 
-/* Iluminar las estrellas anteriores a la seleccionada y la seleccionada */
+/* Highlight the selected star and the previous ones */
 .rating-container input:checked ~ label {
-    color: #ccc; /* Reiniciamos el color por defecto */
+    color: #ccc; /* Reset to default color */
 }
 
 .rating-container input:checked + label,
@@ -81,7 +81,7 @@ input:focus, select:focus, textarea:focus {
     color: #ffcc00;
 }
 
-/* Mantener iluminadas las estrellas seleccionadas al hacer clic */
+/* Keep stars highlighted when clicked */
 .rating-container input:checked + label,
 .rating-container input:checked + label ~ label {
     color: #ffcc00;

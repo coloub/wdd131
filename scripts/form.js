@@ -1,6 +1,4 @@
-
-
-// Array de productos
+// Array of products
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
   { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -9,11 +7,11 @@ const products = [
   { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
 
-// Función para poblar el select de productos
+// Function to populate the product select
 function populateProductSelect() {
   const productSelect = document.getElementById('product-name');
   
-  // Poblar el select con las opciones de los productos
+  // Populate the select with product options
   products.forEach(product => {
       const option = document.createElement('option');
       option.value = product.id;
@@ -22,7 +20,7 @@ function populateProductSelect() {
   });
 }
 
-// Actualizar la fecha de modificación del footer
+// Update the last modified date in the footer
 function updateFooterDate() {
   const yearElement = document.getElementById('currentyear');
   yearElement.textContent = new Date().getFullYear();
@@ -30,14 +28,9 @@ function updateFooterDate() {
   lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 }
 
-// Ejecutar al cargar la página
+// Execute when the page loads
 window.onload = function() {
   populateProductSelect();
   updateFooterDate();
 };
 
-const yearElement = document.getElementById('currentyear');
-yearElement.textContent = new Date().getFullYear();
-
-const lastModifiedElement = document.getElementById('lastModified');
-lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
