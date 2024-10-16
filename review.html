@@ -24,6 +24,11 @@
 
         // Mostrar el contador actualizado
         document.getElementById('review-count').textContent = `You have completed ${reviewCount} reviews.`;
+
+        // Limpiar campos del formulario tras la sumisión
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
     </script>
 </body>
 </html>

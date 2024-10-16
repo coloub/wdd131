@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals: Learn the essential concepts of dynamic web development, including HTML, CSS, JavaScript, and database interaction. Gain practical skills to build interactive websites.">
+    <meta name="author" content="Jose Manuel Mendoza Torrico">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css">
 </head>
@@ -20,15 +22,15 @@
             <label for="rating">Overall Rating</label>
             <div class="rating-container">
                 <input type="radio" id="star1" name="rating" value="1" required>
-                <label for="star1">&#9733;</label>
+                <label for="star1" class="star">&#9733;</label>
                 <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2">&#9733;&#9733;</label>
+                <label for="star2" class="star">&#9733;&#9733;</label>
                 <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3">&#9733;&#9733;&#9733;</label>
+                <label for="star3" class="star">&#9733;&#9733;&#9733;</label>
                 <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4">&#9733;&#9733;&#9733;&#9733;</label>
+                <label for="star4" class="star">&#9733;&#9733;&#9733;&#9733;</label>
                 <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+                <label for="star5" class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
             </div>
             
             <!-- Date of Installation -->
@@ -67,7 +69,7 @@
 
     <!-- Common Footer -->
     <footer>
-        <p>&copy;2024 Tools Store | Last Modification: 02/26/2024</p>
+        <p>&copy;2024 Tools Store | Last Modification: <span id="last-modified"></span></p>
     </footer>
 
     <script src="form.js"></script>
