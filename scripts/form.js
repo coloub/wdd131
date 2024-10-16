@@ -1,3 +1,5 @@
+
+
 // Array de productos
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
@@ -22,8 +24,10 @@ function populateProductSelect() {
 
 // Actualizar la fecha de modificación del footer
 function updateFooterDate() {
-  const lastModified = document.lastModified;
-  document.getElementById('last-modified').textContent = lastModified;
+  const yearElement = document.getElementById('currentyear');
+  yearElement.textContent = new Date().getFullYear();
+  const lastModifiedElement = document.getElementById('lastModified');
+  lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 }
 
 // Ejecutar al cargar la página
@@ -31,3 +35,9 @@ window.onload = function() {
   populateProductSelect();
   updateFooterDate();
 };
+
+const yearElement = document.getElementById('currentyear');
+yearElement.textContent = new Date().getFullYear();
+
+const lastModifiedElement = document.getElementById('lastModified');
+lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
