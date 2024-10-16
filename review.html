@@ -10,22 +10,22 @@
     <p id="review-count"></p>
 
     <script>
-        // Obtener el contador de reseñas de localStorage
+        // Get the review count from localStorage
         let reviewCount = localStorage.getItem('reviewCount');
 
-        // Si no existe, inicializamos en 0
+        // If it doesn't exist, initialize to 0
         if (!reviewCount) {
             reviewCount = 0;
         }
 
-        // Incrementar el contador de reseñas
+        // Increment the review count
         reviewCount++;
         localStorage.setItem('reviewCount', reviewCount);
 
-        // Mostrar el contador actualizado
+        // Display the updated count
         document.getElementById('review-count').textContent = `You have completed ${reviewCount} reviews.`;
 
-        // Limpiar campos del formulario tras la sumisión
+        // Clear form fields after submission
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);
         }
