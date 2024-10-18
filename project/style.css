@@ -1,0 +1,112 @@
+/* Basic reset to remove default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9; /* Softer background color */
+    color: #333; /* Text color for better contrast */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header style */
+header {
+    background-color: #004d40; /* Teal background for the header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation style */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ff7043; /* Orange for the links */
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease; /* Smooth link transition */
+}
+
+nav a:hover {
+    color: #e64a19; /* Darker orange on hover */
+}
+
+/* Main section style */
+.site-plan {
+    background-color: white; /* White background for the main section */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 20px;
+}
+
+/* Subtitle styles */
+h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #ff7043; /* Orange underline for the titles */
+    padding-bottom: 10px;
+}
+
+/* List styles */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-weight: 600; /* Bold for list items */
+}
+
+/* Footer styles */
+footer {
+    background-color: #004d40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Styles for buttons and call-to-actions */
+button, .cta {
+    background-color: #ff7043;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover, .cta:hover {
+    background-color: #e64a19;
+}
