@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - DTUP BO</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="checkout">
+    <h2>Review Your Order</h2>
+    <div id="checkout-items"></div>
+    <h3>Total: $<span id="checkout-total"></span></h3>
+    <form id="payment-form" action="#">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" required>
+
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" required maxlength="16">
+
+      <button type="submit">Complete Purchase</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> DTUP BO, All rights reserved</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

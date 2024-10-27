@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You for Your Purchase</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Purchase!</h1>
+  </header>
+
+  <section class="checkout">
+    <div class="container">
+      <p>Your order has been processed successfully. We appreciate your trust in us and hope you enjoy your products.</p>
+
+      <section class="rating-section">
+        <h2>Rate Your Experience</h2>
+        <form id="feedback-form">
+          <div class="form-group">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+              <option value="5">Excellent</option>
+              <option value="4">Very Good</option>
+              <option value="3">Good</option>
+              <option value="2">Fair</option>
+              <option value="1">Poor</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="What can we improve?"></textarea>
+          </div>
+      
+          <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+      </section>
+      
+      <section class="faq-section">
+        <h2>Questions About Your Products?</h2>
+        <p>Check our FAQs or contact us for more information regarding:</p>
+        <ul>
+          <li>Shipping and delivery times</li>
+          <li>Return policies</li>
+          <li>Support and warranty</li>
+        </ul>
+      </section>
+
+      <button class="main-page-button" onclick="goToHomePage()">Return to Store</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> DTUP BO, All rights reserved</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

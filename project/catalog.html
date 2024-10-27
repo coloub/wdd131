@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog - DTUP BO</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Product Catalog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="catalog">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+      <div class="product-card" id="product1">
+        <img src="images/product1.jpg" alt="Laptop1">
+        <h3>MSI GL63 Gaming Laptop</h3>
+        <p>$1200</p>
+        <button onclick="addToCart('Laptop1', 1200)">Add to Cart</button>
+      </div>
+      <div class="product-card" id="product2">
+        <img src="images/product2.jpg" alt="Laptop2">
+        <h3>MSI GL63 9SDK-879 15.6 Gaming Laptop</h3>
+        <p>$1500</p>
+        <button onclick="addToCart('Laptop2', 1500)">Add to Cart</button>
+      </div>
+      <div class="product-card" id="product3">
+        <img src="images/product3.jpg" alt="Laptop3">
+        <h3>MSI GL63 Gaming Laptop</h3>
+        <p>$1200</p>
+        <button onclick="addToCart('Laptop3', 1200)">Add to Cart</button>
+      </div>
+      <div class="product-card" id="product4">
+        <img src="images/product4.jpg" alt="Laptop4">
+        <h3>MSI GL63 9SDK-879 15.6 Gaming Laptop</h3>
+        <p>$1500</p>
+        <button onclick="addToCart('Laptop4', 1500)">Add to Cart</button>
+      </div>
+      
+      <!-- Añadir más productos aquí -->
+    </div>
+  </section>
+
+  <!-- Carrito actualizado para mayor claridad -->
+  <section class="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total"></span></h3>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="proceedToCheckout()">Checkout</button> <!-- Nuevo botón de checkout -->
+  </section>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> DTUP BO, All rights reserved</p>
+    <p id="lastModified"></p></footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
